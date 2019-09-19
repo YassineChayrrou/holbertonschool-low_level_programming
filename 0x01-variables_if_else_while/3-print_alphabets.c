@@ -6,11 +6,11 @@
  */
 int main(void)
 {
-	char al[27] = "abcdefghijklmnopqrstuvwxyz";
-	char au[27] = "BCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char ch, chup;
 
-	putchar(al);
-	putchar(au);
-	putchar(\n);
-	return (0);
+	for (ch = 'a'; ch <= 'z'; ++ch)
+	putchar(ch);
+	for (chup = 'A'; chup <= 'Z'; ++chup)
+	putchar(chup);
+	putchar('\n');
 }
