@@ -13,4 +13,5 @@ int main(void)
 	for (chup = 'A'; chup <= 'Z'; ++chup)
 	putchar(chup);
 	putchar('\n');
+	return (0);
 }
