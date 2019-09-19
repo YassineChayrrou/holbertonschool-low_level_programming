@@ -6,9 +6,13 @@
  */
 int main(void)
 {
-	char c[27] = "abcdefghijklmnopqrstuvwxyz";
+	char ch = 'a';
 
-	putchar(c);
-	putchar(\n);
+	while (ch <= 'z')
+	{
+		putchar(ch);
+		ch++;
+	}
+	putchar('\n');
 	return (0);
 }
