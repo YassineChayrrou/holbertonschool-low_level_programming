@@ -14,8 +14,8 @@ int _putchar(char c)
 int main(void)
 {
 	int i;
-	char w[]= "Holberton";
-	
+	char w[] = "Holberton";
+
 	for (i = 0; i < 10; i++)
 	_putchar(w[i]);
 	_putchar('\n');
