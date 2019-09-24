@@ -1,14 +1,16 @@
 #include "holberton.h"
+
 /**
- * main - check function positive_or_negative
- * Return: Always 0.
- */
+* main - tests if function negative_or_positive() works value of 0
+* Return: 0.
+*/
+
 int main(void)
 {
-	int i;
+int i;
 
-	i = 0;
-	positive_or_negative(i);
+i = 0;
+positive_or_negative(i);
 
-	return (0);
+return (0);
 }
