@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - check the code for Holberton School students.
+ * main - check function positive_or_negative
  *
  * Return: Always 0.
  */
