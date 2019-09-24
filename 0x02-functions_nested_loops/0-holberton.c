@@ -6,6 +6,8 @@
  */
 int main(void)
 {
-	printf("Holberton\n");
+	int ch[] = 'Holberton';
+
+	_putchar(ch);
 	return (0);
 }
