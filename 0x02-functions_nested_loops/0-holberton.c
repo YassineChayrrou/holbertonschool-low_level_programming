@@ -1,13 +1,23 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
- * main - check the code for Holberton School students.
- *Program that prints Holberton
- * Return: Always 0.
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 int main(void)
 {
-	int ch[] = 'Holberton';
-
-	_putchar(ch);
+	int i;
+	char w[]= "Holberton";
+	
+	for (i = 0; i < 10; i++)
+	_putchar(w[i]);
+	_putchar('\n');
 	return (0);
 }
