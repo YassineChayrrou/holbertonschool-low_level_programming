@@ -1,18 +1,16 @@
 #include "holberton.h"
 /**
- * _putchar - writes the character c to stdout
- *
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * main - Entry point
+ *print hello holberton
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
 	int i;
-	char w[] = "Holberton";
+	char ch[] = "Holberton";
 
 	for (i = 0; i < 10; i++)
-	_putchar(w[i]);
+		_putchar(ch[i]);
 	_putchar('\n');
 	return (0);
 }
