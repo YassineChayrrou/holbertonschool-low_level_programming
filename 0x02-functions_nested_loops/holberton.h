@@ -1,4 +1,6 @@
-#ifndef HOLBERTON_H
+#ifndef _HOLBERTON_H
 #define HOLBERTON_H
+
 int _putchar(char c);
-#endif
+
+#endif /* _HOLBERTON_H_ */
