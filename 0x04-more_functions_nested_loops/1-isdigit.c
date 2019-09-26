@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-  *_isdigit - function to check for a digit 
+  *_isdigit - function to check for a digit
   *@c: digit to check
   *Return: 0 or 1
   */
@@ -11,7 +11,5 @@ int _isdigit(int c)
 		return (1);
 	}
 	else
-	{
-		return(0);
-	}
+		return (0);
 }
