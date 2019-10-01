@@ -2,6 +2,7 @@
 /**
   *_strlen - returns the length of string
   *@s: points to char
+  *Return: i
   */
 int _strlen(char *s)
 {
@@ -12,5 +13,5 @@ int _strlen(char *s)
 		i++;
 		s++;
 	}
-	return(i);
+	return (i);
 }
