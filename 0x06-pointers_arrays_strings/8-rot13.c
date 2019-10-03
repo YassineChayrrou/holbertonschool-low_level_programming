@@ -1,28 +1,22 @@
 #include "holberton.h"
-
 /**
- * leet - encode a string into 1337
+ * rot13 - rotate characters 13 places in the alphabet
  * @s: string
- * Return: encoded string `s`
+ * Return: string `s` rotated
  */
-
-char *leet(char *s)
+char *rot13(char *s)
 {
 	int i;
+	char storeh[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
+	char storel[] = "nopqrstuvwxyzabcdefghijklm";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		while (s[i] == 'a' || s[i] == 'A')
-			s[i] = '4';
-		while (s[i] == 'e' || s[i] == 'E')
-			s[i] = '3';
-		while (s[i] == 'o' || s[i] == 'O')
-			s[i] = '0';
-		while (s[i] == 't' || s[i] == 'T')
-			s[i] = '7';
-		while (s[i] == 'l' || s[i] == 'L')
-			s[i] = '1';
+		if ((s[i] > 64 && s[i] < 91) || (s[i] > 96 && s[i] < 123))
+		{
+			s[i] = (s[i] - 65 > 25) ?
+				storel[s[i] - 97] : storeh[s[i] - 65];
+		}
 	}
-
 	return (s);
 }
