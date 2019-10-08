@@ -8,11 +8,10 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int i, j;
-	
+
 	i = 0;
 	j = 0;
 	do {
-		
 		while (haystack[i] == needle[j])
 		{
 			j++;
