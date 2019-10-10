@@ -1,6 +1,6 @@
 #ifndef _HOLBERTON_H
 #define _HOLBERTON_H
-int _putchar(char c);
+void _putchar(char c);
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
 int _strlen_recursion(char *s);
@@ -11,4 +11,6 @@ int is_prime_number(int n);
 int is_palindrome(char *s);
 int finder(int m, int p);
 int prime_finder(int i, int n);
+int _check(char *s, int l);
+int wildcmp(char *s1, char *s2);
 #endif /* _HOLBERTON_H */
