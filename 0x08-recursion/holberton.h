@@ -10,4 +10,5 @@ int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int is_palindrome(char *s);
 int finder(int m, int p);
+int prime_finder(int i, int n);
 #endif /* _HOLBERTON_H */
