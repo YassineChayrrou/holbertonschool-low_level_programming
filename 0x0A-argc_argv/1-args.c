@@ -1,12 +1,18 @@
+#include "holberton.h"
 #include <stdio.h>
+
 /**
-  *main - entry point
-  *@argc: takes an integer
-  *Return: 0
-  */
+ * main - prints number of arguments
+ * @argc: argument count
+ * @argv: argument vector takes arry
+ * Return: 0
+ */
+
 int main(int argc, char *argv[])
 {
-	(void) argv
+	(void) argv;
+
 	printf("%d\n", argc - 1);
+
 	return (0);
 }
