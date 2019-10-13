@@ -1,14 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
-  *
-  *
-  *
+  *main - multiply two arguments if they are numbers
+  *@argc: takes argument count
+  *@argv: takes argument vector
+  *Return: 0
   */
 int main(int argc, char *argv[])
 {
 	int i, Result;
 
-	Result = 
+	Result = 1;
 	if (argc < 3)
 	{
 		printf("Error\n");
