@@ -3,7 +3,7 @@
 #include <ctype.h>
 /**
   *main - function that adds integer arguments
-  *@argc: argument count
+  *@argc:takes argument count
   *@argv: argument vector
   */
 int main(int argc, char *argv[])
