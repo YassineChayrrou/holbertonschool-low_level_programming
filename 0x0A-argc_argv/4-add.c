@@ -12,10 +12,6 @@ int main(int argc, char *argv[])
 	int i, j, Result;
 
 	Result = 0;
-	if (argc == 0)
-		printf("0 \n");
-	else
-	{
 		for (i = 1; i < argc; i++)
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
@@ -30,5 +26,4 @@ int main(int argc, char *argv[])
 	}
 	printf("%d \n", Result);
 	return (0);
-	}
 }
