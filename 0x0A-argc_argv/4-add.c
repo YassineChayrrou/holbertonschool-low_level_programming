@@ -12,18 +12,22 @@ int main(int argc, char *argv[])
 	int i, j, Result;
 
 	Result = 0;
+	if (argc > 0)
+	{
 		for (i = 1; i < argc; i++)
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (!isdigit(argv[i][j]))
 			{
-				printf("Error \n");
+				printf("Error\n");
 				return (1);
 			}
 		}
 		Result += atoi(argv[i]);
 	}
-	printf("%d \n", Result);
-	return (0);
+	printf("%d\n", Result);
+	}
+	else
+		return (0);
 }
