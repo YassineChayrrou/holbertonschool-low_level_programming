@@ -5,6 +5,7 @@
   *main - function that adds integer arguments
   *@argc:takes argument count
   *@argv: argument vector
+  *Return: 0 or 1
   */
 int main(int argc, char *argv[])
 {
@@ -28,5 +29,6 @@ int main(int argc, char *argv[])
 		Result += atoi(argv[i]);
 	}
 	printf("%d \n", Result);
+	return (0);
 	}
 }
