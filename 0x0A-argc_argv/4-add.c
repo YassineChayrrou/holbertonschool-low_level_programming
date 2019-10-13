@@ -16,13 +16,13 @@ int main(int argc, char *argv[])
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (!isdigit(argv[i][j]))
+			if (argv[i][j] >= 48 && argv[i][j] <= 57)
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		Result += atoi(argv[i]);
+		Result = Result + atoi(argv[i]);
 	}
 	printf("%d\n", Result);
 	return (0);
