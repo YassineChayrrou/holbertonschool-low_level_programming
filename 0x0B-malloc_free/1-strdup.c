@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-  *
-  *
-  *
+  *_strdup - copy given string in allocated memory with malloc
+  *@str: takes string
+  *Return: A or NULL
   */
 char *_strdup(char *str)
 {
@@ -19,7 +19,7 @@ char *_strdup(char *str)
 	if (A == NULL)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
-		*(A + i) = *(str + i);
+		A[i] = str[i];
 	A[i] = '\0';
 	return (A);
 }
