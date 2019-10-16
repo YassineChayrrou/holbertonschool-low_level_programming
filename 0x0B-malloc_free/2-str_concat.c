@@ -19,7 +19,7 @@ int _strlen(char *s)
   *str_concat - concat to string and store them in allocated memory space
   *@s1: takes a string
   *@s2: takes a string
-  *Return:
+  *Return: NULL or A
   */
 char *str_concat(char *s1, char *s2)
 {
@@ -32,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	A = malloc((l1 + l2 + 1) * sizeof(char));
 	if (A == NULL)
-		return(NULL);
+		return (NULL);
 	for (i = 0; i < l1; i++)
 		A[i] = s1[i];
 	for (i = 0; i < (l1 + l2); i++)
