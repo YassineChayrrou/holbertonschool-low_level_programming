@@ -8,29 +8,25 @@
  * @n: bytes to include of s2
  * Return: NULL if fail or pointer to malloc memory
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p;
-	int len1, i, c;
+	char *ptr, *empty;
+	unsigned int i, k;
 
+	empty = "";
 	if (s1 == NULL)
-		s1 = "";
+		s1 = empty;
 	if (s2 == NULL)
-		s2 = "";
-	for (len1 = 0; s[len1] != '\0'; len1++)
+		s2 = empty;
+	for (i = 0; s1[i] != '\0'; i++)
 		;
-	p = malloc((len1 + n + 1) * sizeof(char));
-	if (p == NULL)
+	ptr = malloc((i + (n * sizeof(*s2) + 1) * sizeof(*ptr)));
+	if (ptr == NULL)
 		return (NULL);
-	for (i = 0, c = 0; i < (len1 + n); i++)
-	{
-		if (i < len1)
-			p[i] = s1[i];
-		else
-			p[i] = s2[c++];
-	}
-	p[i] = '\0';
-
-	return (p);
+	for (i = 0; s1[i] != '\0'; i++)
+		ptr[i] = s1[i];
+	for (k = 0; s2[k] != '\0' && k < n; k++, i++)
+		ptr[i] = s2[k];
+	ptr[i] = '\0';
+	return (ptr);
 }
