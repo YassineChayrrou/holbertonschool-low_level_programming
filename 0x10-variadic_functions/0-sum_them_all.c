@@ -7,10 +7,9 @@
   */
 int sum_them_all(const unsigned int n, ...)
 {
-	va_list arg;
-	int sum = 0;
-	int i;
+	unsigned int i, sum;
 
+	va_list arg;
 	if (n == 0)
 		return;
 	va_start(arg, n);
