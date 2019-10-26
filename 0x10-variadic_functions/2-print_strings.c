@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-  *
-  *
-  *
+  *print_strings - prints all string arguments
+  *@separator: takes string
+  *@n: takes number of arguments
   */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -13,6 +13,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *checker;
 
 	va_start(arg, n);
+
 	for (i = 0; i < n; i++)
 	{
 		checker = va_arg(arg, char *);
@@ -23,6 +24,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (separator != NULL && i < n - 1)
 			printf("%s", separator);
 	}
-	va_end(arg);
 	printf("\n");
+	va_end(arg);
 }
