@@ -8,9 +8,9 @@
   */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list arg;
 	unsigned int i;
 	char *checker;
+	va_list arg;
 
 	va_start(arg, n);
 
