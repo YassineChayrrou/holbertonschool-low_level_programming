@@ -2,20 +2,21 @@
 /**
   * print_list -prints the elements of a list
   * @h: pointer to constat list_t
-  * Return: size_t
+  * Return: c
   */
 size_t print_list(const list_t *h)
 {
-	size_t n = 0;
-	const list_t *p = h;
+	const list_t *p;
+	size_t c;
 
-	if (p == NULL)
-		return (0);
+	c = 0;
+	p = h;
 	while (p != NULL)
 	{
 		printf("[%d] %s\n", p->len, p->str);
 		p = p->next;
-		n++;
+		c++;
 	}
-	return (n);
+
+	return (c);
 }
