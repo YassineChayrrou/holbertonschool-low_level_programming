@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 /**
   * print_list -prints the elements of a list
   * @h: pointer to constat list_t
