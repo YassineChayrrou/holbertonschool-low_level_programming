@@ -17,8 +17,8 @@ int _strlen(const char *s)
 }
 /**
   * _strdup -  string duplicate function
-  * @src: source of string to duplicate
-  * Return: pointer to space with copied string
+  * @src: string to duplicate
+  * Return: dest
   */
 void *_strdup(const char *src)
 {
@@ -36,24 +36,24 @@ void *_strdup(const char *src)
 }
 /**
   * add_node_end - add new nodes to the end of the list
-  * @head: current place in the list
-  * @str: string to be added to the head
-  * Return: head: pointer to current position in list
+  * @head: local place in the list
+  * @str: string to be added to head
+  * Return: head: pointer to local in LL
   */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new, *current;
-	char *dupstr;
+	list_t *new, *local;
+	char *duplicate;
 
 	if (str == NULL)
 		return (NULL);
-	dupstr = _strdup(str);
-	if (dupstr == NULL)
+	duplicate = _strdup(str);
+	if (duplicate == NULL)
 		return (NULL);
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 		return (NULL);
-	new->str = dupstr;
+	new->str = duplicate;
 	new->len = _strlen(str);
 	new->next = NULL;
 
@@ -62,9 +62,9 @@ list_t *add_node_end(list_t **head, const char *str)
 		*head = new;
 		return (*head);
 	}
-	current = *head;
-	while (current->next != NULL)
-		current = current->next;
-	current->next = new;
+	local = *head;
+	while (local->next != NULL)
+		local = local->next;
+	local->next = new;
 	return (*head);
 }
