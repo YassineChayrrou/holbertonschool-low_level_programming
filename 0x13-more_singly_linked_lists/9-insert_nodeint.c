@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
-  *
-  *
-  *
+  *insert_nodeint_at_index - insert new node in specific index
+  *@idx: index to insert node
+  *@n: value of new node
+  *Return: new_node or NULL
   */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
