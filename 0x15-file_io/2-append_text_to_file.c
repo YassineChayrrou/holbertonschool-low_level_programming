@@ -19,8 +19,10 @@ int append_text_to_file(const char *filename, char *text_content)
 	while (text_content != NULL)
 		len++;
 	append = write(fileDescriptor, text_content, len);
+	if (close(fileDescriptor) == -1)
+	return (-1);
 	if (append == -1)
 		return (-1);
-	close(fileDescriptor);
-	return (1);
+	else
+		return (1);
 }
