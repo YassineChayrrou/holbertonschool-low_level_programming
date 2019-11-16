@@ -7,7 +7,7 @@
   */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fileDescriptor, len = 0, append;
+	int fileDescriptor, len, append;
 
 	if (filename == NULL)
 		return (-1);
@@ -16,11 +16,11 @@ int append_text_to_file(const char *filename, char *text_content)
 	fileDescriptor = open(filename, O_APPEND | O_WRONLY);
 	if (fileDescriptor == -1)
 		return (-1);
-	while (text_content[len] != NULL)
-		len++;
+	for (len = 0; text_content[len] != '\0'; len++)
+		;
 	append = write(fileDescriptor, text_content, len);
 	if (close(fileDescriptor) == -1)
-	return (-1);
+		return (-1);
 	if (append == -1)
 		return (-1);
 	else
