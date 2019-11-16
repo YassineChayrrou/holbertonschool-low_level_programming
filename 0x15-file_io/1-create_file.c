@@ -21,7 +21,7 @@ int create_file(const char *filename, char *text_content)
 	}
 	for (len = 0; text_content[len] != '\0'; len++)
 		;
-	writeContent = write(fileDescriptor, (void *)text_content, len);
+	writeContent = write(fileDescriptor, text_content, len);
 	if (close(fileDescriptor) == -1)
 		return (-1);
 	if (writeContent == -1)
