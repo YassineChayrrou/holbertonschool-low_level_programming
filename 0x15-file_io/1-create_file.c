@@ -19,10 +19,8 @@ int create_file(const char *filename, char *text_content)
 	for (len = 0; text_content[len] != '\0'; len++)
 		;
 	writeContent = write(fileDescriptor, text_content, len);
-	if (writeContent == -1)
-	{
-		return (-1);
-	}
 	close(fileDescriptor);
+	if (writeContent == -1)
+		return (-1);
 	return (1);
 }
