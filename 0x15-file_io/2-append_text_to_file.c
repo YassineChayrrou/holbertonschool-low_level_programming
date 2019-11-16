@@ -2,8 +2,8 @@
 /**
   *append_text_to_file - appends text to file i guess
   *@filename: pointer to char
-  *@tex_content: pointer to char
-  *
+  *@text_content: pointer to char
+  *Return:  1 or -1
   */
 int append_text_to_file(const char *filename, char *text_content)
 {
@@ -16,7 +16,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	fileDescriptor = open(filename, O_APPEND | O_WRONLY);
 	if (fileDescriptor == -1)
 		return (-1);
-	while(text_content != NULL)
+	while (text_content != NULL)
 		len++;
 	append = write(fileDescriptor, text_content, len);
 	if (append == -1)
