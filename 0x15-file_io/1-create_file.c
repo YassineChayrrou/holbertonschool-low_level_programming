@@ -11,7 +11,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
-	fileDescriptor = open(filename, O_CREAT | O_TRUNC | O_RDWR, 600);
+	fileDescriptor = open(filename, O_CREAT | O_TRUNC | O_RDWR, 0600);
 	if (fileDescriptor == -1)
 		return (-1);
 	if (text_content == NULL)
@@ -21,7 +21,7 @@ int create_file(const char *filename, char *text_content)
 	}
 	for (len = 0; text_content[len] != '\0'; len++)
 		;
-	writeContent = write(fileDescriptor, text_content, len);
+	writeContent = write(fileDescriptor, (void *)text_content, len);
 	if (close(fileDescriptor) == -1)
 		return (-1);
 	if (writeContent == -1)
