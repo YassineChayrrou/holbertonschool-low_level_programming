@@ -1,0 +1,26 @@
+#include "holberton.h"
+/**
+  *append_text_to_file - appends text to file i guess
+  *@filename: pointer to char
+  *@tex_content: pointer to char
+  *
+  */
+int append_text_to_file(const char *filename, char *text_content)
+{
+	int fileDescriptor, len = 0, append;
+
+	if (filename == NULL)
+		return (-1);
+	if (text_content == NULL)
+		return (1);
+	fileDescriptor = open(filename, O_APPEND | O_WRONLY);
+	if (fileDescriptor == -1)
+		return (-1);
+	while(text_content != NULL)
+		len++;
+	append = write(fileDescriptor, text_content, len);
+	if (append == -1)
+		return (-1);
+	close(fileDescriptor);
+	return (1);
+}
