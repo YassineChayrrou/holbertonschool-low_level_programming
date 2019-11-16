@@ -15,12 +15,17 @@ int create_file(const char *filename, char *text_content)
 	if (fileDescriptor == -1)
 		return (-1);
 	if (text_content == NULL)
+	{
+		close(fileDescriptor);
 		return (1);
+	}
 	for (len = 0; text_content[len] != '\0'; len++)
 		;
 	writeContent = write(fileDescriptor, text_content, len);
-	if (writeContent == -1 && writeContent != len)
+	if (close(fileDescriptor) == -1)
 		return (-1);
-	close(fileDescriptor);
-	return (1);
+	if (writeContent == -1)
+		return (-1);
+	else
+		return (1);
 }
