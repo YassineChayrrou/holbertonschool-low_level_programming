@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
-  *
-  *
-  *
+  *read_textfile - read text file in and print to POSIX output
+  *@filename: pointer to char
+  *@letters: number of letters
+  *Return: writeContent
   */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
