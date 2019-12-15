@@ -21,7 +21,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	newNode->n = n;
 	store = *h;
-	for (i = 0; store && i < idx; i++)
+	for (i = 0; store && i <= idx; i++)
 	{
 		store = store->next;
 		if (store == NULL)
