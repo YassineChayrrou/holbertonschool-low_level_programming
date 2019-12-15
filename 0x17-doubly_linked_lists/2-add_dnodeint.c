@@ -3,7 +3,7 @@
   *add_dnodeint - adds a new node to the beginning of doubly linked list
   *@head: double pointer to the head node
   *@n: data to store in node
-  *Return: pointer to new node or NULL in case of Failure
+  *Return: pointer to new node or NULL in case of Failur in case of Failuree
   */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
@@ -25,7 +25,6 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	{
 		holder->prev = newNode;
 		newNode->next = holder;
-		//holder = newNode;
 		*head = newNode;
 		return (*head);
 	}
