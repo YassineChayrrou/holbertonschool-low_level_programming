@@ -14,11 +14,10 @@ int main(void)
 		{
 			a = a + b;
 			b = a - b;
-			printf("%lu, ", a);
+			printf("%ld, ", a);
 		}
 		else
-			printf("%lu", a);
+			printf("%ld\n", a);
 	}
-	printf("\n");
 	return (0);
 }
