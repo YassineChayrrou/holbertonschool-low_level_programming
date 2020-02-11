@@ -2,7 +2,7 @@
 /**
   *main - prints 50 first elements of fibonnaci sequence
   *
-  *
+  *Return: 0
   */
 int main(void)
 {
