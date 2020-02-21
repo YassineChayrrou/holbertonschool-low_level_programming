@@ -1,5 +1,4 @@
 cc= gcc
 SRC= main.c holberton.c
-
 all:
-	${cc} ${SRC} -o holberton
+	$(cc) $(SRC) -o holberton
